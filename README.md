@@ -1,2 +1,223 @@
 # shaggys-world
 My dog website project
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shaggy's World</title>
+  <style>
+    :root {
+      --bg: #f7f5f2;
+      --surface: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #7c3aed;
+      --accent-2: #0f766e;
+      --border: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3a8a, #7c3aed);
+      color: white;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 0.75rem;
+      font-size: 1.1rem;
+    }
+
+    nav {
+      background: white;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 1rem;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: bold;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+      padding: 2rem 0 4rem;
+    }
+
+    .hero-card,
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      margin-top: 2rem;
+    }
+
+    .hero-card {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-image {
+      width: 100%;
+      min-height: 320px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #dbeafe, #ede9fe);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-weight: bold;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.25rem;
+    }
+
+    .fact-box {
+      background: #faf5ff;
+      border: 1px solid #e9d5ff;
+      border-radius: 16px;
+      padding: 1.25rem;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .tag {
+      background: #ecfeff;
+      color: var(--accent-2);
+      border: 1px solid #a5f3fc;
+      padding: 0.5rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem 3rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Shaggy's World 🐾</h1>
+    <p>Meet the official supervisor of Web_With_Kate.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#facts">Fun Facts</a></li>
+      <li><a href="#adventures">Adventures</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <section class="hero-card" id="about">
+      <div>
+        <h2 class="section-title">About Shaggy</h2>
+        <p>
+          Shaggy is a sweet, vocal, zoomie-loving rescue dog and an Australian Cattle Dog mix.
+          He follows Kate everywhere, supervises kitchen trips, and believes every walk is the
+          most exciting event of the day.
+        </p>
+        <div class="tag-list">
+          <span class="tag">Gentle</span>
+          <span class="tag">Dramatic</span>
+          <span class="tag">Loyal</span>
+          <span class="tag">Zoomie Expert</span>
+        </div>
+      </div>
+      <div class="hero-image">Add Shaggy's photo here</div>
+    </section>
+
+    <section class="card" id="facts">
+      <h2 class="section-title">Fun Facts</h2>
+      <div class="grid">
+        <div class="fact-box">
+          <h3>Shadow Dog</h3>
+          <p>Shaggy follows Kate everywhere, even if she just gets up for a glass of water.</p>
+        </div>
+        <div class="fact-box">
+          <h3>Dog Park Zoomies</h3>
+          <p>His favorite routine is long straight sprints with sharp turns at the dog park.</p>
+        </div>
+        <div class="fact-box">
+          <h3>Very Opinionated</h3>
+          <p>If asked to move from the couch, he groans dramatically like he is 100 years old.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="adventures">
+      <h2 class="section-title">Adventures</h2>
+      <p class="muted">A future section for walks, photo galleries, favorite parks, and Shaggy stories.</p>
+      <ul>
+        <li>Daily dog park visits</li>
+        <li>Recall training with treats</li>
+        <li>Sniff patrol duty</li>
+        <li>Evening couch supervision</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    Built by Kate | Web_With_Kate
+  </footer>
+</body>
+</html>
