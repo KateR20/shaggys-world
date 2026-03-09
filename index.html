@@ -5,6 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shaggy's World</title>
   <style>
+    .gallery {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 1rem;
+margin-top: 1rem;
+}
+
+.gallery img {
+width: 100%;
+border-radius: 12px;
+object-fit: cover;
+transition: transform 0.2s ease;
+}
+
+.gallery img:hover {
+transform: scale(1.05);
+}
     :root {
       --bg: #f7f5f2;
       --surface: #ffffff;
